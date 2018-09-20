@@ -11,12 +11,13 @@ html, body {
   justify-content: center; }
 
 #root {
-  width: 90%; }
+  width: 95%; }
 
 .container {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  border: 2px solid blue; }
   .container #editor, .container #preview {
     height: 80vh;
     width: 50%;

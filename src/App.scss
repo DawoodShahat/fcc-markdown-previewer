@@ -17,11 +17,12 @@ html, body {
 }
 
 #root {
-    width: 90%;
+    width: 95%;
 }
 
 .container {
     @include centerXY; 
+    border: 2px solid blue;
 
     #editor, #preview {
         height: 80vh;

@@ -37,6 +37,18 @@ Also read about:
 
 Copyright (c) 2011-2018, Christopher Jeffrey. (MIT License)`;
 
+function Editor(props){
+    const {
+        value,
+        handleChange
+    } = props;
+    return (
+        <textarea id="editor" value={value} onChange={handleChange}>
+        </textarea>
+    );
+}
+
+
 class App extends Component {
 
     constructor(props){
@@ -65,8 +77,10 @@ class App extends Component {
     render(){
         return (
             <div className="container">
-                <textarea id="editor" value={this.state.inputString} onChange={this.handleChange}>
-                </textarea>
+                <Editor
+                    value={this.state.inputString}
+                    handleChange={this.handleChange}
+                />
                 <div id="preview" dangerouslySetInnerHTML={{__html: this.state.outputMarkdown}}>
                 </div>
             </div>
