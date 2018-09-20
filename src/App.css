@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#root {
+  width: 80%; }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .container #editor, .container #preview {
+    height: 80vh;
+    width: 50%;
+    border: 1px solid green;
+    padding: 1rem; }
+  .container #editor {
+    outline: none;
+    font-size: 2em;
+    resize: none; }

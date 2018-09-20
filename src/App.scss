@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin centerXY {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    @include centerXY;
+}
+
+#root {
+    width: 80%;
+}
+
+.container {
+    @include centerXY; 
+
+    #editor, #preview {
+        height: 80vh;
+        width: 50%;
+        border: 1px solid green;
+        padding: 1rem;
+    }
+
+    #editor {
+        outline: none;
+        font-size: 2em;
+        resize: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
