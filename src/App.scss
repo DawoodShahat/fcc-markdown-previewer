@@ -17,7 +17,7 @@ html, body {
 }
 
 #root {
-    width: 80%;
+    width: 90%;
 }
 
 .container {
@@ -26,13 +26,14 @@ html, body {
     #editor, #preview {
         height: 80vh;
         width: 50%;
-        border: 1px solid green;
+        border: 5px solid green;
         padding: 1rem;
+        overflow-y: scroll;
+        font-size: 1em;
     }
 
     #editor {
         outline: none;
-        font-size: 2em;
         resize: none;
     }
 }
