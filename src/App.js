@@ -57,6 +57,7 @@ class App extends Component {
 
     handleChange(e){
         this.setState({
+            inputString: e.target.value,
             outputMarkdown: marked(e.target.value) 
         });
     }

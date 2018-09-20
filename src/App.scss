@@ -26,7 +26,6 @@ html, body {
     #editor, #preview {
         height: 80vh;
         width: 50%;
-        border: 5px solid green;
         padding: 1rem;
         overflow-y: scroll;
         font-size: 1em;
@@ -35,7 +34,9 @@ html, body {
     #editor {
         outline: none;
         resize: none;
+        margin-right: 1rem;
     }
+
 }
 
 
