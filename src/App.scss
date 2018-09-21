@@ -36,18 +36,28 @@ html, body {
 
     .editor-preview-wrapper {
         @include centerXY; 
+        flex-direction: column;
 
         .editor-wrapper, .preview-wrapper {
-            height: 80vh;
-            width: 50%;
+            border: 2px solid steelblue;
+        }
 
-            .title-bar {
-                width: 100%;
-                background: steelblue;
-                font-size: 1.2em;
-                color: #fff;
-                padding: .5rem .5rem;
-            }
+        .editor-wrapper {
+            width: 70%;
+            margin-bottom: 2.5rem;
+        }
+
+        .preview-wrapper {
+            width: 80%;
+            margin-bottom: 3.5rem;
+        }
+
+        .title-bar {
+            width: 100%;
+            background: steelblue;
+            font-size: 1.2em;
+            color: #fff;
+            padding: .5rem .5rem;
         }
 
         .editor-wrapper {
@@ -63,10 +73,13 @@ html, body {
             font-size: 1em;
             overflow-y: scroll;
             padding: 1rem;
+            height: 400px;
         }
 
         #preview {
-            padding: 1rem ;
+            padding: 2rem;
+            height: 500px;
+            overflow-y: scroll;
         }
 
     }
