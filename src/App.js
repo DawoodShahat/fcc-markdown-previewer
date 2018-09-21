@@ -40,11 +40,22 @@ Copyright (c) 2011-2018, Christopher Jeffrey. (MIT License)`;
 function Editor(props){
     const {
         value,
-        handleChange
+        handleChange,
     } = props;
     return (
         <textarea id="editor" value={value} onChange={handleChange}>
         </textarea>
+    );
+}
+
+function Preview(props){
+    const {
+        outputMarkdown
+    } = props;
+
+    return (
+        <div id="preview" dangerouslySetInnerHTML={{__html: outputMarkdown}}>
+        </div>
     );
 }
 
@@ -81,8 +92,10 @@ class App extends Component {
                     value={this.state.inputString}
                     handleChange={this.handleChange}
                 />
-                <div id="preview" dangerouslySetInnerHTML={{__html: this.state.outputMarkdown}}>
-                </div>
+                <Preview
+                    outputMarkdown={this.state.outputMarkdown}
+                />
+
             </div>
         )
     }
