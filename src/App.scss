@@ -11,7 +11,6 @@
 }
 
 html, body {
-    height: 100vh;
     width: 100%;
     @include centerXY;
 }
@@ -21,23 +20,56 @@ html, body {
 }
 
 .container {
-    @include centerXY; 
-    border: 2px solid blue;
 
-    #editor, #preview {
-        height: 80vh;
-        width: 50%;
-        padding: 1rem;
-        overflow-y: scroll;
-        font-size: 1em;
+    .title {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 3em;
+        color: tomato;
+    }  
+
+    .menu {
+        height: 20px;
+        width: 100%;
+        background: steelblue;
     }
 
-    #editor {
-        outline: none;
-        resize: none;
-        margin-right: 1rem;
-    }
+    .editor-preview-wrapper {
+        @include centerXY; 
 
+        .editor-wrapper, .preview-wrapper {
+            height: 80vh;
+            width: 50%;
+
+            .title-bar {
+                width: 100%;
+                background: steelblue;
+                font-size: 1.2em;
+                color: #fff;
+                padding: .5rem .5rem;
+            }
+        }
+
+        .editor-wrapper {
+              margin-right: .1rem;
+        }
+
+        #editor {
+            resize: none;
+            outline: none;
+            border: 0;
+            height: inherit;
+            width: 100%;
+            font-size: 1em;
+            overflow-y: scroll;
+            padding: 1rem;
+        }
+
+        #preview {
+            padding: 1rem ;
+        }
+
+    }
 }
 
 

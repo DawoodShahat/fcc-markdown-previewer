@@ -43,8 +43,11 @@ function Editor(props){
         handleChange,
     } = props;
     return (
-        <textarea id="editor" value={value} onChange={handleChange}>
-        </textarea>
+        <div class="editor-wrapper">
+            <div class="title-bar">Editor</div>
+            <textarea id="editor" value={value} onChange={handleChange}>
+            </textarea>
+        </div>
     );
 }
 
@@ -54,7 +57,10 @@ function Preview(props){
     } = props;
 
     return (
-        <div id="preview" dangerouslySetInnerHTML={{__html: outputMarkdown}}>
+        <div class="preview-wrapper">
+            <div class="title-bar">Preview</div>
+            <div id="preview" dangerouslySetInnerHTML={{__html: outputMarkdown}}>
+            </div>
         </div>
     );
 }
@@ -88,14 +94,18 @@ class App extends Component {
     render(){
         return (
             <div className="container">
-                <Editor
-                    value={this.state.inputString}
-                    handleChange={this.handleChange}
-                />
-                <Preview
-                    outputMarkdown={this.state.outputMarkdown}
-                />
-
+                <h1 className="title"> Markdown Previewer </h1>
+                <div className="editor-preview-wrapper">
+                    <Editor
+                        value={this.state.inputString}
+                        handleChange={this.handleChange}
+                    />
+                    <div style={{clear: 'both'}}></div>
+                    <Preview
+                        outputMarkdown={this.state.outputMarkdown}
+                    />
+                    <div style={{clear: 'both'}}></div>
+                </div>
             </div>
         )
     }

@@ -4,7 +4,6 @@
   box-sizing: border-box; }
 
 html, body {
-  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -13,18 +12,40 @@ html, body {
 #root {
   width: 95%; }
 
-.container {
+.container .title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3em;
+  color: tomato; }
+
+.container .menu {
+  height: 20px;
+  width: 100%;
+  background: steelblue; }
+
+.container .editor-preview-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 2px solid blue; }
-  .container #editor, .container #preview {
+  justify-content: center; }
+  .container .editor-preview-wrapper .editor-wrapper, .container .editor-preview-wrapper .preview-wrapper {
     height: 80vh;
-    width: 50%;
-    padding: 1rem;
-    overflow-y: scroll;
-    font-size: 1em; }
-  .container #editor {
-    outline: none;
+    width: 50%; }
+    .container .editor-preview-wrapper .editor-wrapper .title-bar, .container .editor-preview-wrapper .preview-wrapper .title-bar {
+      width: 100%;
+      background: steelblue;
+      font-size: 1.2em;
+      color: #fff;
+      padding: .5rem .5rem; }
+  .container .editor-preview-wrapper .editor-wrapper {
+    margin-right: .1rem; }
+  .container .editor-preview-wrapper #editor {
     resize: none;
-    margin-right: 1rem; }
+    outline: none;
+    border: 0;
+    height: inherit;
+    width: 100%;
+    font-size: 1em;
+    overflow-y: scroll;
+    padding: 1rem; }
+  .container .editor-preview-wrapper #preview {
+    padding: 1rem; }
