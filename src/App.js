@@ -3,7 +3,7 @@ import './App.css';
 import marked from 'marked';
 
 const initial = 
-`<a href="https://marked.js.org">
+`<a href="https://marked.js.org" target="_blank">
   <img width="60px" height="60px" src="https://marked.js.org/img/logo-black.svg" align="right" />
 </a>
 
@@ -58,7 +58,7 @@ function Preview(props){
 
     return (
         <div class="preview-wrapper">
-            <div class="title-bar">Preview</div>
+            <div class="title-bar">Previewer</div>
             <div id="preview" dangerouslySetInnerHTML={{__html: outputMarkdown}}>
             </div>
         </div>

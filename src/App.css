@@ -10,13 +10,14 @@ html, body {
   justify-content: center; }
 
 #root {
-  width: 95%; }
+  width: 100%;
+  background-color: #D2D8FC; }
 
 .container .title {
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-size: 3em;
-  color: tomato; }
+  color: #546C84; }
 
 .container .menu {
   height: 20px;
@@ -29,7 +30,7 @@ html, body {
   justify-content: center;
   flex-direction: column; }
   .container .editor-preview-wrapper .editor-wrapper, .container .editor-preview-wrapper .preview-wrapper {
-    border: 2px solid steelblue; }
+    border: 2px solid #04244C; }
   .container .editor-preview-wrapper .editor-wrapper {
     width: 70%;
     margin-bottom: 2.5rem; }
@@ -38,7 +39,7 @@ html, body {
     margin-bottom: 3.5rem; }
   .container .editor-preview-wrapper .title-bar {
     width: 100%;
-    background: steelblue;
+    background: #04244C;
     font-size: 1.2em;
     color: #fff;
     padding: .5rem .5rem; }
@@ -53,8 +54,18 @@ html, body {
     font-size: 1em;
     overflow-y: scroll;
     padding: 1rem;
-    height: 400px; }
+    height: 400px;
+    background-color: #2C3B5C;
+    color: #fff; }
   .container .editor-preview-wrapper #preview {
     padding: 2rem;
     height: 500px;
-    overflow-y: scroll; }
+    width: 100%;
+    overflow-y: scroll;
+    background-color: #CCDCDC; }
+
+@media screen and (max-width: 768px) {
+  .container .editor-preview-wrapper .editor-wrapper {
+    width: 80%; }
+  .container .editor-preview-wrapper .preview-wrapper {
+    width: 90%; } }
