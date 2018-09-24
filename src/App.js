@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 import marked from 'marked';
 
+marked.setOptions({
+    gfm: true,
+    breaks: true
+});
+
 const initial = 
-`<a href="https://marked.js.org" target="_blank">
+`
+<a href="https://marked.js.org" target="_blank">
   <img width="60px" height="60px" src="https://marked.js.org/img/logo-black.svg" align="right" />
 </a>
-
 # Marked
-
 [![npm](https://badgen.net/npm/v/marked)](https://www.npmjs.com/package/marked)
 [![gzip size](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/marked/marked.min.js?compression=gzip)](https://cdn.jsdelivr.net/npm/marked/marked.min.js)
 [![install size](https://badgen.net/packagephobia/install/marked)](https://packagephobia.now.sh/result?p=marked)
