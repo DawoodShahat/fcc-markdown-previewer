@@ -11,3 +11,4 @@ Install the dependencies.
   - `npm start`
   -  visit your local host server
 
+Feedback issues etc. are more than welcome!
